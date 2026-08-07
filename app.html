@@ -1,0 +1,45 @@
+<h1>Hortifruti Hellsing</h1>
+
+<hr>
+
+<h3>Cadastrar Novo Produto</h3>
+
+<div>
+    <label>Nome da fruta:</label>
+    <!-- ngModel conecta o campo com a variavel nomeDigitado-->
+    <input type="text" [(ngModel)]="nomeDigitado">
+</div>
+
+<br>
+
+<div>
+    <label>Valor (R$): </label>
+    <!-- ngModel conecta o campo com a variavel valorDigitado-->
+    <input type="number" [(ngModel)]="valorDigitado">
+</div>
+
+<br>
+
+<!-- o (click) avisa o Angular para rodar a função adicinarProduto()-->
+<button (click)="adicionarProduto()">Cadastrar</button>
+
+<hr>
+
+<h3>Lista de Produtos Cadastrados</h3>
+
+<ul>
+    <!-- i @for repete a tag <li> para cada item na nossa lista de produtos -->
+    @for (item of produtos; track $index) {
+        <li>
+            <strong>Produto:</strong> {{ item.nome }} | <strong>Valor:</strong> R$ {{ item.valor }}
+
+            <button (click)="editarProduto( $index )">Editar</button>
+
+            <button (click)="excluirProduto( $index )">Excluir</button>
+        </li>
+
+    } @empty {
+        <!-- o @empty aparece automaticamente se a lista estiver vazia-->
+        <p>Nenhum produto cadastrado</p>
+    }
+</ul>
