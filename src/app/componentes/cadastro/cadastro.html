@@ -1,0 +1,42 @@
+<div id="div-form">
+  <h2>Cadastro de Pessoas</h2>
+
+  <form id="formulario">
+    <label for="nome"> Nome da Pessoa </label>
+    <input type="text" name="nome" id="nome" [(ngModel)]="nome" />
+
+    <label for="email"> E-mail </label>
+    <input type="email" name="email" id="email" [(ngModel)]="email" />
+
+    <label for="CPF"> CPF </label>
+    <input type="number" name="cpf" id="cpf" [(ngModel)]="cpf" maxlength="9" />
+
+    <label for="bday"> Data de nascimento </label>
+    <input type="date" name="bday" id="bday" [(ngModel)]="bday"/>
+
+
+    <label for="uf"> UF (Estado) </label>
+    <select name="uf" id="uf" [(ngModel)]="uf" (change)="carregarCidades()">
+      <option value="" disabled selected>Selecione um Estado</option>
+      <!-- loop na lista de estados -->
+      @for (estado of estados; track estado.id) {
+        <option [value]="estado.sigla">{{ estado.nome }} ({{ estado.sigla }})</option>
+      }
+    </select>
+
+    <label for="municipio"> Município </label>
+    <select name="municipio" id="municipio" [(ngModel)]="municipio">
+      <option value="" disabled selected>Selecione uma Cidade</option>
+      <!-- loop na lista de cidades -->
+      @for (cidade of cidades; track cidade.id) {
+        <option [value]="cidade.nome">{{ cidade.nome }}</option>
+      }
+    </select>
+
+  </form>
+
+  <div id="div-btns">
+    <button type="button" id="btnAdd" class="btnAdd" (click)="save()">Adicionar</button>
+    <button id="btnNav" class="btnNav" href="#" routerLink="/consulta">Consultar</button>
+  </div>
+</div>

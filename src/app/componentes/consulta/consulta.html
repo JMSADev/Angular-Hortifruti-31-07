@@ -1,0 +1,27 @@
+<div id="div-titulo">
+  <h2>Lista de Pessoas</h2>
+
+  <div id="div-lista">
+    @for (elem of listar(); track elem.idPessoa) {
+    <!-- Mudamos para class="caixa-item" -->
+    <div class="caixa-item">
+      <span class="texto-dados">
+        {{ elem.idPessoa }} - {{ elem.nome }} - {{ elem.email }} - {{ elem.cpf }} - {{ elem.bday }} - {{ elem.uf }} - {{ elem.municipio }}
+      </span>
+
+      <span class="div-btns-item">
+        <button class="btnEditar" (click)="editar(elem)">EDITAR</button>
+        <button class="btnExcluir" (click)="excluir(elem.idPessoa!)">EXCLUIR</button>
+      </span>
+    </div>
+    } @empty {
+    <div class="caixa-item">
+      NENHUMA PESSOA CADASTRADA
+    </div>
+    }
+
+    <div id="div-btns">
+      <button id="btnNav" class="btnNav" routerLink="/cadastro">CADASTRAR</button>
+    </div>
+  </div>
+</div>

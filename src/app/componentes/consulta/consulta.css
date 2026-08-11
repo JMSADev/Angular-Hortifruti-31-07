@@ -1,0 +1,85 @@
+#div-lista {
+  width: 800px; /* Aumentei um pouco para caber os botões sem espremer */
+  min-height: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid var(--borda-form);
+  border-radius: 12px;
+  background-color: var(--fundo-form);
+}
+
+h2 {
+  text-align: center;
+  padding: 10px 0px 30px;
+  letter-spacing: 2px;
+  color: var(--texto-titulo);
+  text-transform: uppercase;
+}
+
+/* Nova classe para os itens da lista */
+.caixa-item {
+  width: 100%;
+  min-height: 40px;
+  margin: 15px 0;
+  padding: 15px;
+  background-color: var(--fundo-pagina);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--texto-titulo);
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.texto-dados {
+  flex: 1;
+}
+
+.div-btns-item {
+  display: flex;
+  gap: 10px;
+  margin-left: 15px;
+}
+
+.btnEditar {
+  background-color: #f59e0b;
+  color: white;
+  width: 70px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.7em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnExcluir {
+  background-color: #ef4444;
+  color: white;
+  width: 70px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.7em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#div-btns {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.btnNav {
+  background-color: var(--botao2);
+  color: var(--texto-titulo);
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}

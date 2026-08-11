@@ -1,0 +1,64 @@
+:root {
+  --fundo-pagina: #121212;
+  --fundo-form: #1e1e1e;
+  --borda-form: #333333;
+  --texto-titulo: #f4f7d6;
+  --texto-cinza: #a0aec0;
+
+  /* Cores dos Botões */
+  --botao1: #3b82f6; /* Azul um pouco mais vibrante para dar um contraste legal no fundo escuro */
+  --botao2: #4a5568; /* Cinza médio/escuro para o botão de consultar */
+  --texto-botao: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Garante que a página cubra a tela toda */
+  background-color: var(--fundo-pagina); /* Aplica o preto/cinza escuro */
+  color: var(--texto-titulo);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: 0 1px 3px rgba(20, 20, 50, 0.05);
+}
+
+.form-label { font-weight: 600; font-size: 0.9rem; color: var(--color-text); }
+
+.btn-primary-app {
+  background: var(--color-primary);
+  border: none;
+  color: #fff;
+  padding: 0.55rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+.btn-primary-app:hover { background: var(--color-primary-dark); color: #fff; }
+
+.btn-accent-app {
+  background: var(--color-accent);
+  border: none;
+  color: #fff;
+  padding: 0.55rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.btn-accent-app:hover { opacity: 0.9; color: #fff; }
+
+.invalid-msg {
+  color: var(--color-danger);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.form-control.is-invalid-app {
+  border-color: var(--color-danger) !important;
+}

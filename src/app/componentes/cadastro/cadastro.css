@@ -1,0 +1,113 @@
+:root {
+  /* Paleta Confortável */
+  --fundo-pagina: #f4f7f6; /* Fundo geral cinza/verde bem clarinho e suave */
+  --fundo-form: #ffffff; /* Fundo do formulário branco para destacar suavemente */
+  --borda-form: #e2e8f0; /* Borda cinza bem clara */
+  --texto-titulo: #2d3748; /* Cinza escuro elegante em vez de preto puro */
+  --texto-cinza: #718096; /* Cinza médio para os rótulos (labels) */
+  --botao1: #66b2ff; /* Azul pastel suave para o botão principal */
+  --botao2: #cbd5e0; /* Cinza suave para o botão secundário */
+  --texto-botao: #ffffff; /* Texto branco para leitura nos botões */
+}
+
+body {
+  background-color: var(--fundo-pagina);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais confortável para leitura */
+  color: var(--texto-titulo);
+}
+
+#div-form {
+  width: 500px;
+  min-height: 600px;
+  margin: 50px auto; /* Corrigido: centralizado com margem superior/inferior de 50px */
+  padding: 20px;
+  border: 1px solid var(--borda-form);
+  border-radius: 12px; /* Bordas um pouquinho mais arredondadas */
+  background-color: var(--fundo-pagina);
+}
+
+h2 {
+  text-align: center;
+  padding: 20px 0px;
+  letter-spacing: 2px; /* Reduzido de 5px para facilitar a leitura */
+  color: var(--texto-titulo); /* Corrigido para não usar a cor do fundo */
+  text-transform: uppercase;
+}
+
+#formulario {
+  padding: 25px;
+  border-radius: 12px;
+  background-color: var(--fundo-form);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra bem leve para o formulário saltar da tela */
+}
+
+label {
+  width: 100%;
+  display: block;
+  font-size: 0.95em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--texto-cinza);
+  margin-top: 15px; /* Espaço extra antes de cada input */
+  margin-bottom: 5px;
+}
+
+input, select {
+  height: 38px;
+  border: 1px solid var(--borda-form);
+  border-radius: 6px;
+  width: 100%;
+  padding: 0 12px;
+  box-sizing: border-box;
+  outline: none;
+
+  background-color: var(--fundo-pagina); /* Fica escuro igual ao fundo */
+  color: var(--texto-titulo); /* O texto fica claro */
+
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: var(--botao1); /* Fica azulzinho quando clica */
+}
+
+#div-btns {
+  margin: 30px 0px 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Espaçamento moderno entre os botões */
+}
+
+button {
+  width: 150px;
+  height: 40px; /* Um pouco mais alto */
+  border: none;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  font-weight: bold;
+  color: var(--texto-botao);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1); /* Sombra mais sutil e elegante */
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.98); /* Efeitinho de "apertar" o botão */
+}
+
+#btnAdd {
+  background-color: var(--botao1);
+}
+
+/* O HTML usa btnNav no botão de consultar, ajustei aqui */
+#btnNav {
+  background-color: var(--botao2);
+  color: var(--texto-titulo); /* Para dar contraste com o fundo cinza do botão */
+}
